@@ -1,0 +1,32 @@
+{
+  "name": "jem1427-gpio-ts",
+  "version": "0.1.0",
+  "main": "dst/index.js",
+  "types": "dst/index.d.ts",
+  "license": "ISC",
+  "files": [
+    "src",
+    "dst"
+  ],
+  "scripts": {
+    "build": "tsc -p . --declarationMap",
+    "prepublishOnly": "npm run build"
+  },
+  "dependencies": {
+    "@types/rpi-gpio": "^2.1.1",
+    "rpi-gpio": "^2.1.7",
+    "strict-event-emitter": "^0.2.0"
+  },
+  "devDependencies": {
+    "@types/node": "^16.7.1",
+    "@typescript-eslint/eslint-plugin": "^4.29.2",
+    "@typescript-eslint/parser": "^4.29.2",
+    "eslint": "^7.32.0",
+    "typescript": "^4.1.5"
+  },
+  "author": "nana4rider",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nana4rider/jem1427-gpio-ts.git"
+  }
+}
