@@ -18,11 +18,12 @@ const GPIO_CONTROL_CHANNEL = 20;
 const GPIO_MONITOR_CHANNEL = 21;
 
 const jema = new JEM1427Gpio(GPIO_CONTROL_CHANNEL, GPIO_MONITOR_CHANNEL);
-await jema.init();
 
 jema.on('ready', () => {
   console.log('Ready!');
 });
+
+await jema.init();
 
 jema.on('change', state => {
   console.log(`The door is ${state ? 'locked': 'unlocked'}.`);
